@@ -1,18 +1,19 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.changhong.data</groupId>
-  <artifactId>common-test</artifactId>
-  <version>1.0.0.RELEASE</version>
-  
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.changhong.data</groupId>
+	<artifactId>common-test</artifactId>
+	<version>1.0.0.RELEASE</version>
+
+	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<hibernate.version>4.2.7.SP1</hibernate.version>
 		<parent.version>0.0.1-SNAPSHOT</parent.version>
 	</properties>
-	
-  <build>
+
+	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -79,12 +80,92 @@
 				</plugin> -->
 		</plugins>
 	</build>
-	
+
 	<dependencies>
+		<!-- spring test -->
 		<dependency>
-		<groupId>org.springframework</groupId>
-        <artifactId>spring-test</artifactId>
-        <version>${spring.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+			<optional>true</optional>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- spring test -->
+
+		<!-- log begin -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.6</version>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.16</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.1.3</version>
+		</dependency>
+		<!-- log end -->
+
+		<!-- json start -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.4.5</version>
+			<optional>true</optional>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+			<version>2.4.5</version>
+			<optional>true</optional>
+		</dependency>
+		<!-- json end -->
+
+		<!-- test start -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>1.9.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-junit4</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.5.3</version>
+		</dependency>
+
+		<!-- test end -->
 	</dependencies>
 </project>
